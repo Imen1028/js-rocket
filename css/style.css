@@ -1,3 +1,27 @@
 body {
     background-color: bisque;
 }
+
+p {
+    text-align: center;
+}
+
+.cool {
+    width: 100px;
+    height: 25px;
+    background-color: rgb(55, 98, 241);
+    transition: background-color 1s;
+}
+
+.cool.red {
+    background-color: red;
+}
+
+.cool.gray{
+    background-color: gray;
+    color: white;
+}
+
+.p {
+    height: 700px
+}

@@ -1,4 +1,19 @@
 console.log('hello there friends!');
+var doCoolStuff = function () {
+    var currentClassName = document.getElementById('cool').className;
+    if (currentClassName == 'cool') {
+        document.getElementById('cool').className = 'cool red';
+    } else if (currentClassName == 'cool red') {
+        document.getElementById('cool').className = 'cool gray';
+    } else if (currentClassName == 'cool gray') {
+        document.getElementById('cool').className = 'cool';
+        }
+}
+
+var southPark = function() {
+    alert ('Weed');
+}
+
 var sayMyName = function (name) {
     alert ('My name is: '+name);
 }
@@ -30,3 +45,5 @@ var car = {
         }
     }
 };
+
+var x = (1+1)
