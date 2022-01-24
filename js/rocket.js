@@ -1,3 +1,4 @@
+//Why do I need to set timer = null??
 var timer = null;
 var countDownNumber = 10;
 
