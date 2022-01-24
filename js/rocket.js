@@ -8,7 +8,22 @@ var changeState = function(state) {
     clearInterval(timer);
     countDownNumber = 10;
     document.getElementById('countDown').innerHTML = countDownNumber;
+ /* If statement:
+    if (condition) {
+        block of code to be executed if the condition is true
+        e.g., 
+        function() {}
 
+        Variable = xyz...
+
+        timer = setInterval(function (){
+        countDownNumber = countDownNumber - 1;
+            document.getElementById('countDown').innerHTML = countDownNumber;
+            if (countDownNumber <=0) {
+                changeState(3);
+            }; 
+        }, 300);
+ */ 
     if (state == 2) {
         timer = setInterval(function (){
             /*
@@ -19,6 +34,7 @@ var changeState = function(state) {
 
             countDownNumber = countDownNumber - 1;
             document.getElementById('countDown').innerHTML = countDownNumber;
+            // A if statement inside a if statement!!!
             if (countDownNumber <=0) {
                 changeState(3);
             }; 
@@ -35,7 +51,7 @@ var changeState = function(state) {
                     changeState(4);
                 } else {
                     changeState(5);
-                };
+                }
         }, 2000)
         //2000 等於 2000ms = 2s
     }
