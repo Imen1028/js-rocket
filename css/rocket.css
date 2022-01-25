@@ -1,3 +1,7 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 .left {
     position: fixed;
     background-color: lightblue;
@@ -5,6 +9,26 @@
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.interface {
+    text-align: center;
+    padding: 20px;
+}
+
+a.button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: color 300ms;
+}
+
+a:hover {
+    color:cornflowerblue;
 }
 
 .right {
@@ -16,32 +40,72 @@
     right: 0;
 }
 
+.ground {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    height: 20px;
+    background: url('../img/ground.png') no-repeat center 0;
+}
+
+.nervous {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    background: url('../img/nervous.png') no-repeat 0 0;
+    width: 223px;
+    height: 100px;
+    margin-left: -200px;
+    display: none;
+}
+.nervous.show {
+    display: block;
+}
+
+.cant-wait {
+    position: absolute;
+    bottom: 135px;
+    left: 50%;
+    background: url('../img/cant-wait.png') no-repeat 0 0;
+    width: 206px;
+    height: 65px;
+    margin-left: 25px;
+    transform: rotate(10deg);
+    display: none;
+}
+.cant-wait.show {
+    display: block;
+}
+
 .rocket {
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    width: 20px;
-    height: 100px;
-    background-color: rgb(100, 125, 235);
+    bottom: -13px;
+    width: 143px;
+    height: 272px;
+    margin-left: -71.5px;
+    background: url('../img/rocket-state1.png') no-repeat 0 0;
     transition: bottom 10s;
 }
 
-body.body-state1 .rocket {
-    transition: none;
+body.body-state2 .rocket {
+    background-image: url('../img/rocket-state2.gif');
 }
 
 body.body-state3 .rocket,
 body.body-state4 .rocket {
     bottom: 1000px;
+    background-image: url('../img/rocket-state3.gif');
 }
-
-.ground {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 20px;
-    background-color: rgb(236, 82, 82);
+body.body-state5 .rocket {
+    background-image: url('../img/boom.png');
+    width: 209px;
+    height: 200px;
+    margin-left: -104.5px;
+}
+body.body-state1 .rocket {
+    transition: none;
 }
 
 .state1,
@@ -57,7 +121,6 @@ body.body-state2 .state2{display: block;}
 body.body-state3 .state3{display: block;}
 body.body-state4 .state4{display: block;}
 body.body-state5 .state5{display: block;}
-
 
 /* 
 These two sets of code means the same.
@@ -109,3 +172,9 @@ body.body-state4 .state4{display: block;}
 body.body-state5 .state5{display: block;}
 */
 
+/*
+IMPORTANT:     
+background: url('../img/rocket-state1.png'); 
+
+I need to learn more about position(absolute and fixed)
+*/
