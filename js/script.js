@@ -51,3 +51,9 @@ var car = {
 };
 
 var x = (1+1)
+
+let a, b, c;
+a = 5;
+b = 6;
+c = a + b;
+
