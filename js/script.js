@@ -6,7 +6,7 @@ console.log('hello there friends!');
 var doCoolStuff = function () {
     var currentClassName = document.getElementById('cool').className;
     if (currentClassName == 'cool') {
-        document.getElementsById('cool').className = 'cool red';
+        document.getElementById('cool').className = 'cool red';
     } else if (currentClassName == 'cool red') {
         document.getElementById('cool').className = 'cool gray';
     } else if (currentClassName == 'cool gray') {
